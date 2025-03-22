@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <body>
+            <button onclick="btn()">clicked me</button>
+            <button onclick="stopbtn()">Stop</button>
+            <h1 id="count"></h1>
+            <script>
+                let count=1;
+                 let interval;
+
+                 function stopbtn(){
+                    clearInterval(interval);
+                 }
+                function btn(){
+                    interval=setInterval(()=>{
+                        setCount();
+                    },500);
+                }
+                function setCount(){
+
+              
+                    document.getElementById("count").innerHTML=count;
+                    count++;
+                   
+                }
+
+            </script>
+        </body>
+    </head>
+</html>
